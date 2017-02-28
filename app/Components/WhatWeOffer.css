@@ -1,0 +1,39 @@
+@value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5 as from "./breakpoints.css";
+
+.whatWeOfferMain {
+    display: inline-block;
+    background-color: #ecf1f2;
+    width: 100%;
+}
+.whatWeOfferMain h3 {
+    text-align: center;
+}
+.students, .companies, .universities {
+    width: 33%;
+    float: left;
+    display: block;
+}
+/*.companies {
+    width: 33%;
+    float: left;
+    display: block;
+}
+.universities {
+    width: 33%;
+    float: left;
+    display: block;
+}*/
+@media bp-iphone5 {
+    .students, .companies, .universities {
+      width: 100%;
+    }
+    p, h3{
+      font-size: 4vmin;
+    }
+    li{
+      font-size: 3vmin;
+    }
+    h2{
+      font-size: 5vmin;
+    }
+  }

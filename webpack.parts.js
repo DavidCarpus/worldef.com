@@ -59,6 +59,19 @@ exports.lintJSX = function(include) {
     }
   };
 }
+exports.jsonData = function(include) {
+  return {
+    module: {
+      preLoaders: [
+        {
+          test: /\.json$/,
+          loaders: ['json'],
+          include: include
+        }
+      ]
+    }
+  };
+}
 
 exports.enableReactPerformanceTools = function() {
   return {
@@ -96,7 +109,8 @@ exports.devServer = function(options) {
       //
       // 0.0.0.0 is available to all network devices
       // unlike default `localhost`.
-      host: options.host, // Defaults to `localhost`
+    //   host: options.host, // Defaults to `localhost`
+      host: '0.0.0.0', // Defaults to `localhost`
       port: options.port // Defaults to 8080
     },
     plugins: [
@@ -124,11 +138,27 @@ exports.setupCSS = function(paths) {
   return {
     module: {
       loaders: [
-        {
-          test: /\.css$/,
-          loaders: ['style', 'css'],
-          include: paths
-        }
+          {
+              test: /\.css$/,
+              loader: 'style-loader'
+          },
+          {
+              test: /\.css$/,
+              loader: 'css-loader',
+              query: {
+                  modules: true,
+                //   localIdentName: '[name]__[local]___[hash:base64:5]'
+              }
+          }
+        // {
+        //   test: /\.css$/,
+        //   loaders: [
+        //       'style',
+        //       'css'
+        //   ],
+        //   include: paths,
+        //   query: { modules: true }
+        // }
       ]
     }
   };

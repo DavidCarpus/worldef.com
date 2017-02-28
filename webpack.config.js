@@ -34,11 +34,13 @@ const common = merge(
     }
   },
   parts.indexTemplate({
-    title: 'Kanban demo',
+    title: 'World Education Foundation',
     appMountId: 'app'
   }),
   parts.loadJSX(PATHS.app),
-  parts.lintJSX(PATHS.app)
+  parts.lintJSX(PATHS.app),
+  parts.jsonData(PATHS.app)
+
 );
 
 var config;

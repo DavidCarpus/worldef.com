@@ -1,0 +1,49 @@
+@value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5 as from "./breakpoints.css";
+
+.weCollaborators {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+/*.thumbnailBlock {
+    width: 110px;
+    height: 150px;
+}*/
+@media bp-medium {
+    .thumbnailBlock {
+        height: 80px;
+        min-height: 100%;
+        min-width: 20%;
+        width: 60px;
+        padding-right: 10px;
+        /*background-color: red;*/
+        display:inline-block;
+        float: left;
+    }
+    .thumbnailBlock img{
+       /*background-color: green;*/
+       margin: 0px 30px 10px 0px;
+       margin: auto;
+       /*width: 100%;*/
+       max-width: 100%;
+       max-height: 100%;
+      flex-shrink:0;
+      vertical-align: middle;
+      display: block;
+     }
+}
+@media bp-iphone5 {
+    .thumbnailBlock {
+        height: 250px;
+        width: 100%;
+        padding-bottom: 80px;
+        /*background-color: green;*/
+    }
+    .thumbnailBlock img{
+        width: 100%;
+        max-height: 100%;
+        /*background-color: blue;*/
+    }
+}

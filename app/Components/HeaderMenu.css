@@ -1,0 +1,28 @@
+.menuHeader{
+    position: fixed;
+    display: block;
+    width: 100%;
+    opacity: 1.0;
+    height: 50px;
+    z-index: 100;
+}
+.caption{
+    width: 100%;
+    display: inline-block;
+    /*background-color: red;*/
+    text-align: center;
+    position: absolute;
+    left: 0;
+    height: 120px;
+    margin-bottom: 0px;
+}
+.logo{
+    vertical-align: middle;
+    height: 80px;
+    opacity: 1;
+}
+
+@media only screen and (min-device-width: 1024px)
+.caption {
+￼    background-attachment: fixed;
+}

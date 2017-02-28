@@ -1,0 +1,67 @@
+@value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5 as from "./breakpoints.css";
+
+.teamMain {
+    display: inline-block;
+    background-color: #ecf1f2;
+    /*background-color: blue;*/
+    width: 100%;
+}
+.teamMain h3{
+    text-align: center;
+    /*background-color: blue;*/
+    width: 100%;
+}
+
+.thumbnailBlock {
+    /*background-color: green;*/
+    margin: 0px 35px 20px 0px;
+    width: 160px;
+    height: 160px;
+    float: left;
+}
+.thumbnailBlock a {
+    text-decoration: none;
+}
+.thumbnailBlock img {
+    display: inline-block;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    /*background-color: blue;*/
+}
+.thumbnailBlock .labelblock{
+ /*background-color: blue;*/
+  position: relative;
+  margin: auto;
+  text-align: center;;
+  color: black;
+  margin-top: -90px;
+  /*margin-top: -90px;*/
+  width: 160px;
+}
+.label {
+    color: black;
+}
+.labelH {
+    color: white;
+}
+@media bp-iphone5 {
+    .thumbnailBlock {
+        margin: 0px 35px 35px 0px;
+        width: 100%;
+        height: 800px;
+        /*background-color: blue;*/
+        align-content: center;
+        float: left;
+    }
+    .thumbnailBlock .labelblock {
+        width: 75%;
+        margin-top: -290px;
+        font-size: 4em;
+    }
+    .thumbnailBlock img {
+        width: 100%;
+        height: 100%;
+    }
+
+}
