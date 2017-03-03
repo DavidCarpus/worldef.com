@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './projects.css';
+import { Link } from 'react-router'
 
 export default class ProjectThumbnail extends React.Component {
   constructor(props, context) {
@@ -40,12 +41,12 @@ export default class ProjectThumbnail extends React.Component {
                 onMouseOver={this.onMouseOver}
                 onMouseOut={this.onMouseOut}
                 >
-                <a href={projRef} >
+                <Link to={projRef}>
             <img
                 src={this.imageLink(proj)}
                 style={{opacity: this.state.hovered ? 1 : 0.5}}
                 />
-        </a >
+        </Link >
         <span className={ styles.tooltiptext }
             style={{visibility: this.state.hovered ? 'visible' : 'hidden'}}
             >

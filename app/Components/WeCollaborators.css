@@ -11,7 +11,7 @@
     width: 110px;
     height: 150px;
 }*/
-@media bp-medium {
+/*@media bp-medium, bp-large {*/
     .thumbnailBlock {
         height: 80px;
         min-height: 100%;
@@ -33,7 +33,7 @@
       vertical-align: middle;
       display: block;
      }
-}
+/*}*/
 @media bp-iphone5 {
     .thumbnailBlock {
         height: 250px;

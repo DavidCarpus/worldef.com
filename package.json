@@ -55,8 +55,13 @@
     "webpack-validator": "^2.2.0"
   },
   "dependencies": {
+    "exenv": "^1.2.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "react-router": "^3.0.2"
+    "react-image-gallery": "^0.7.13",
+    "react-router": "^3.0.2",
+    "react-slick": "^0.14.6",
+    "react-sticky": "^5.0.5",
+    "slick-carousel": "^1.6.0"
   }
 }

@@ -8,9 +8,9 @@ const TARGET = process.env.npm_lifecycle_event;
 const ENABLE_POLLING = process.env.ENABLE_POLLING;
 const PATHS = {
   app: path.join(__dirname, 'app'),
-  style: [
-    path.join(__dirname, 'app', 'main.css')
-  ],
+  // style: [
+  //   path.join(__dirname, 'app', 'main.css')
+  // ],
   build: path.join(__dirname, 'build'),
   test: path.join(__dirname, 'tests')
 };
@@ -77,7 +77,8 @@ switch(TARGET) {
         entries: ['react', 'react-dom']
       }),
       parts.minify(),
-      parts.extractCSS(PATHS.style)
+      parts.setupCSS(PATHS.style)
+    //   , parts.extractCSS(PATHS.style)
     );
     break;
   case 'test':

@@ -1,11 +1,19 @@
 @value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5 as from "./breakpoints.css";
 
+.projectDetailPage {
+    padding-top: 120px;
+    /*margin-left: 20px;
+    margin-right: 20px;*/
+    margin-bottom: 50px;
+    background-color: #ecf1f2;
+}
 .projectsMain {
     /*background-color: red;*/
     display: inline-block;
-    margin-left: 20px;
-    margin-right: 20px;
+    /*margin-left: 20px;
+    margin-right: 20px;*/
     margin-bottom: 50px;
+    background-color: #ecf1f2;
 }
 .projectThumbnail {
     float: left;
@@ -13,6 +21,10 @@
 }
 .projectThumbnail img {
     opacity:0.5;
+}
+h2{
+    width: 100%;
+    text-align: center;
 }
 
 .tooltip {
@@ -80,4 +92,30 @@
           /*width: 250px;*/
       }
 
+  }
+
+
+  .navigationBlock{
+      display: inline-block;
+      width: 100%;
+  }
+.detailNext{
+      background-color: blue;
+      color: white;
+      text-decoration: none;
+      float: right;
+  }
+  .detailNext:after{
+      content: "\21D2";
+      margin-left: 6px;
+  }
+  .detailPrev{
+      background-color: blue;
+      text-decoration: none;
+      color: white;
+      float: left;
+  }
+  .detailPrev:before{
+      content: "\21D0";
+      margin-right: 6px;
   }

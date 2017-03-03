@@ -7,10 +7,10 @@ render(){
          backgroundImage: 'url(' + this.props.image + ')',
      }
     return (
-        <div  className={styles.style1} >
+        <div  className={styles.container} >
             <div
                 style={imageStyle}
-                className={styles.style2}
+                className={styles.image}
                 >
                 {this.props.children}
             </div>

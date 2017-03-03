@@ -6,10 +6,49 @@
     /*background-color: blue;*/
     width: 100%;
 }
-.teamMain h3{
+.teamMain h3, h1{
     text-align: center;
-    /*background-color: blue;*/
     width: 100%;
+}
+.navigationBlock{
+    /*background-color: red;*/
+    height: 30px;
+    display: inline-block;
+    display: block;
+    width: 100%;
+}
+.detailNext{
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    float: right;
+}
+.detailNext:after{
+    content: "\21D2";
+    margin-left: 6px;
+}
+.detailPrev{
+    background-color: blue;
+    text-decoration: none;
+    color: white;
+    float: left;
+}
+.detailPrev:before{
+    content: "\21D0";
+    margin-right: 6px;
+}
+
+.teamDetailPhoto {
+    width: 100%;
+    margin-top: 80px;
+    /*background-color: red;*/
+    align-content: center;
+}
+.teamDetailPhoto img{
+    max-width: 300px;
+    border-radius: 5%;
+    display:block;
+   margin:auto;
 }
 
 .thumbnailBlock {

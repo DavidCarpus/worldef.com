@@ -59,6 +59,7 @@ exports.lintJSX = function(include) {
     }
   };
 }
+
 exports.jsonData = function(include) {
   return {
     module: {
