@@ -9,7 +9,7 @@ export default class WhatWeOffer extends React.Component {
 render(){
     return (
 <div className={styles.whatWeOfferMain}>
-    <h3>What We Offer</h3>
+    <h2>What We Offer</h2>
     <div>
     <OfferStudents />
     <OfferCompanies />

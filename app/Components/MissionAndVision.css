@@ -11,10 +11,13 @@
 }
 .mission, .vision  {
     width: 46%;
+    height: 100%;
+    margin: auto 0;
     font-family: 'Open Sans';
     text-align: center;
     padding: 20px 15px;
     display: inline-block;
+    float: left;
     text-align: justify;
 }
 /*.mission {

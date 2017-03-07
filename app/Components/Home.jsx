@@ -36,17 +36,9 @@ class ContactOptions extends React.Component {
                     </a>
                 </div>
                 <div className={styles.traditional}>
-                    <p>
-                        <i className={[fa['fa-envelope'],fa['fa']].join(' ')}
-                            ></i> -
-                        post@worldef.Component
-                        <br/>
-                        <i className={[fa['fa-phone'],fa['fa']].join(' ')}
-                            ></i> -
-                        WE Foundation org. number 915 548 423
-                        <br/>
-                        EIN number: 80-0332342
-                    </p>
+                        <p><i className={[fa['fa-envelope'],fa['fa']].join(' ')}></i> - post@worldef.Component  </p>
+                        <p><i className={[fa['fa-phone'],fa['fa']].join(' ')}></i> -WE Foundation org. number 915 548 423</p>
+                        <p>EIN number: 80-0332342</p>
                 </div>
             </div>
         )
@@ -62,13 +54,17 @@ export default class Home extends React.Component {
     // World Education Foundation
 
   render(){
+      const currYear=new Date().getFullYear()
       return(
             <StickyContainer>
                 <HdrMenu >
                     World Education Foundation
                 </HdrMenu >
 
-                <BkgImg image="./images/WE-SHOWCASE-Gr--NN-Hj--rnet-1-7.jpg" />
+                <BkgImg
+                    image="./images/WE-SHOWCASE-Gr--NN-Hj--rnet-1-7.jpg"
+                    height='700px'
+                    />
 
                 <MissionAndVision />
 
@@ -81,7 +77,7 @@ export default class Home extends React.Component {
                 <WeProjects />
 
                 <BkgImg image="./images/MG_4151.jpg"
-                    padding='120px'
+                    padding='20px'
                     position='0px 80px'
                     height='500px'
                     >
@@ -94,6 +90,7 @@ export default class Home extends React.Component {
                 <WeTeam />
 
                 <ContactOptions />
+                &copy; {currYear} World Education Foundation
             </StickyContainer>
     )
 }

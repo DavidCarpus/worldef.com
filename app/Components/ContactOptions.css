@@ -1,3 +1,4 @@
+@value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5 as from "./breakpoints.css";
 .socialMedia {
     text-align: center
 }
@@ -5,16 +6,19 @@
     text-align: center;
     background-color: #ecf1f2;
     padding: 20px 0px;
-    line-height: 2em;
+    /*line-height: 2em;*/
     /*background-color: red;*/
 }
 .iconStyle {
-    font-size: 44px;
+    font-size: 64px;
     padding: 20px 0px;
     margin:0 50px;
 }
 @media bp-iphone5 {
     .traditional {
-        font-size: 4vmin;        
+        font-size: 4vmin;
+    }
+    .iconStyle {
+        font-size: 100px;
     }
 }

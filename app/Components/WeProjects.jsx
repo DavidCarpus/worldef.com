@@ -7,7 +7,7 @@ export default class WeMission extends React.Component {
 render(){
     return (
         <section className={ styles.projectsMain }>
-            <h3>WE projects</h3>
+            <h2>WE projects</h2>
               {projects.map(project =>
                       <ProjectThumbnail project={project}
                           key={project.id}/>

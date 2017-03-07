@@ -1,48 +1,5 @@
 @value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5 as from "./breakpoints.css";
 
-.projectDetailPage {
-    padding-top: 120px;
-    /*margin-left: 20px;
-    margin-right: 20px;*/
-    margin: auto;
-    margin-bottom: 50px;
-    background-color: #ecf1f2;
-}
-.projectDesc, .projectFocus , .projectInitiated{
-    padding: 0px 20px;
-}
-.projectsMain {
-    /*background-color: red;*/
-    display: inline-block;
-    margin-bottom: 50px;
-    background-color: #ecf1f2;
-}
-.projectStatistic{
-    width: 180px;
-    margin-bottom: 20px;
-    text-align: center;
-    vertical-align: top;
-    display: inline-block;
-    height: 100%;
-}
-.projectStatisticDesc{
-    vertical-align: top;
-    font-weight: bold;
-    max-height: 50px;
-    /*background-color: blue;*/
-}
-.projectStatisticValue{
-    vertical-align: bottom;
-    position: relative;
-    /*height: 100%;*/
-    margin: auto;
-}
-.projectStatisticBlock{
-    width: 90%;
-    /*background-color: green;*/
-    margin: auto;
-    /*position:relative;*/
-}
 .projectThumbnail {
     float: left;
     width: 200px;
@@ -100,6 +57,28 @@ h2{
   opacity: 1; }
 
 
+
+
+  .projectDetailPage {
+      padding-top: 120px;
+      /*margin-left: 20px;
+      margin-right: 20px;*/
+      margin: auto;
+      margin-bottom: 50px;
+      background-color: #ecf1f2;
+  }
+  .projectDesc, .projectFocus , .projectInitiated{
+      padding: 0px 20px;
+  }
+  .projectsMain {
+      /*background-color: red;*/
+      display: inline-block;
+      /*margin-bottom: 0px;*/
+      background-color: #ecf1f2;
+  }
+  .projectsMain h3{
+      text-align: center;
+  }
   @media bp-iphone5 {
       .projectThumbnail {
           height: 250px;
@@ -124,6 +103,7 @@ h2{
       }
 
   }
+
 
 
   .navigationBlock{
@@ -151,34 +131,65 @@ h2{
       margin-right: 6px;
   }
 
+
+
+
   .timelineBlock{
     width: 100%;
     display: inline-block;
-    /*background-color: blue;*/
   }
-
   .timelineBlockContent{
     width: 90%;
     display: inline-block;
-    borderRadius: '15px';
-
-    /*background-color: blue;*/
+    border-radius: '15px';
   }
-
 .timelineBlockSide{
     text-align: center;
-    /*border: 1px;
-    border-style: solid;*/
   width: 50%;
+}
+
+
+.projectStatistic{
+    width: 180px;
+    margin-bottom: 20px;
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+    height: 100%;
+}
+.projectStatisticDesc{
+    vertical-align: top;
+    font-weight: bold;
+    max-height: 150px;
+    /*background-color: blue;*/
+}
+.projectStatisticValue{
+    vertical-align: bottom;
+    position: relative;
+    /*height: 100%;*/
+    margin: auto;
+}
+.projectStatisticBlock{
+    width: 90%;
+    /*background-color: green;*/
+    margin: auto;
+    /*position:relative;*/
 }
 @media bp-iphone5 {
     .projectStatisticBlock {
             width: 100%;
-        }
-        p, h3{
-          font-size: 4vmin;
-        }
-        li{
           font-size: 3vmin;
         }
+        .projectStatisticDesc{
+            height: 100px;
+        }
+        .timelineBlockContent{
+            width: 100%;
+            font-size: 3vmin;
+        }
+        .timelineBlockSide{
+            width: 100%;
+            float: left;
+        }
+
 }

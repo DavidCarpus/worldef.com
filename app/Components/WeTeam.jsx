@@ -7,7 +7,7 @@ export default class WeTeam extends React.Component {
 render(){
     return (
         <section className={ styles.teamMain }>
-            <h3>WE Team</h3>
+            <h2>WE Team</h2>
               {team.filter( (teamMember)=> {return teamMember.active} ).
                   map(teamMember =>
                       <TeamMemberThumbnail

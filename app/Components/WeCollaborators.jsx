@@ -8,7 +8,7 @@ export default class WeCollaborators extends React.Component {
 render(){
     return (
         <section className={ styles.weCollaborators }>
-            <h3>We Collaborators</h3>
+            <h2>We Collaborators</h2>
             <ul>
               {collaborators.map(collaborator =>
                   <CollaboratorThumbnail
