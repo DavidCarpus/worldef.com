@@ -1,26 +1,20 @@
 import React from 'react';
+import styles from './WhatWeOffer.css';
+import BorderedLinkButton from './BorderedLinkButton';
 
 export default class WeRecruit extends React.Component {
 render(){
     return (
-        <div>
+        <div className={styles.weRecruit}>
             <p >
               We are constantly looking for talented students, professionals and passionate people to join us on the WE mission.
             </p>
-
-            <div >
-              <a href="http://worldef.com/recruit/">We Recruit</a>
-            </div>
+            <BorderedLinkButton url="http://worldef.com/recruit/">We Recruit</BorderedLinkButton>
         </div>
     )
     }
 }
 
-
-// <p style="text-align: center">
-//   We are constantly looking for talented students, professionals and passionate people to join us on the WE mission.
-// </p>
-//
-// <div id='weRecruitButtons' class="buttonBar1">
-//   <a href="http://worldef.com/recruit/" class="buttonWithBorder">We Recruit</a>
-// </div>
+// <a className={styles.weRecruitButton} href="http://worldef.com/recruit/">
+//   We Recruit
+// </a>

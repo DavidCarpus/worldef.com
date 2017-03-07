@@ -1,8 +1,9 @@
 @value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5 as from "./breakpoints.css";
 
 .missionandvision {
-    width: 100%;
+    width: 98%;
     display: inline-block;
+    /*background-color: blue;*/
 }
 
 .missionandvision h2{
@@ -13,19 +14,25 @@
     width: 46%;
     font-family: 'Open Sans';
     text-align: center;
+    /*padding: 20px;*/
     padding: 20px 15px;
+    /*background-color: green;*/
     text-align: justify;
     display: inline-block;
-    float: left;
+    /*float: left;*/
 }
 .vision {
     width: 46%;
     font-family: 'Open Sans';
     text-align: center;
+    flex: 1;
+    /*margin: 20px;*/
     padding: 20px 15px;
     text-align: justify;
     display: inline-block;
+    /*margin: auto;*/
     float: right;
+    /*background-color: red;*/
 }
 .mission h3 {
     text-align: center;

@@ -1,23 +1,34 @@
 import React from 'react';
 import styles from './projects.css';
 
+// <li>{this.props.statistic} = {this.props.value} </li>
+
+class ProjectStatistic extends React.Component {
+    render() {
+        // <p dangerouslySetInnerHTML={{__html: teamMemberText}} ></p>
+            // {this.props.statistic}</div>
+            var desc=this.props.statistic
+        return (
+            <div className={styles.projectStatistic}>
+                <div className={styles.projectStatisticDesc} dangerouslySetInnerHTML={{__html: desc}}></div>
+                <div className={styles.projectStatisticValue}>{this.props.value}</div>
+            </div>
+        )
+    }
+
+}
+
 export default class ProjectStatistics extends React.Component {
     render(){
-        var out = ''
-        // out = JSON.stringify(this.props.project.initiated);
-        if (this.props.project.statistics != null ) {
-            out = Object.keys(this.props.project.statistics).
+        var out = Object.keys(this.props.project.statistics).
                 map( (key, index) =>
-                <li key={index}>{key} = {this.props.project.statistics[key]} </li>
+                <ProjectStatistic key={index} statistic={key} value={this.props.project.statistics[key]} />
             )
-        } else {
-            out = JSON.stringify(this.props.project);
-        }
 
         return (
-            <div>                
+            <div>
                 <h2>Statistics</h2>
-                <ul>{out}</ul>
+                <div className={styles.projectStatisticBlock}>{out}</div>
             </div>
         )
     }

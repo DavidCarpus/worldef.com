@@ -10,7 +10,7 @@ if(process.env.NODE_ENV !== 'production') {
 }
 
 ReactDOM.render(
-(    <Router history={hashHistory}>
+(    <Router  onUpdate={() => window.scrollTo(0, 0)} history={hashHistory}>
     <Route path="/" component={Home}/>
     <Route path="/TeamMember/:teamMemberID" component={TeamMember}/>
     <Route path="/weProjects/:projectID" component={Project}/>

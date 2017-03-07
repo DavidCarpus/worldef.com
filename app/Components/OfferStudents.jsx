@@ -1,11 +1,22 @@
 import React from 'react';
 import styles from './WhatWeOffer.css';
+import fa from 'font-awesome/css/font-awesome.css';
+// require('font-awesome/css/font-awesome.css');
+
+
+// style="font-size:44px;margin:0 50%;"
 
 export default class OfferStudents extends React.Component {
+
 render(){
+    const iconStyle={
+        fontSize:'44px',
+        margin:'0 50%'
+    }
     return (
     <div  className={styles.students} >
-        <h3>Students / Practitioners</h3>
+        <i className={[fa['fa-mortar-board'],fa['fa']].join(' ')} style={iconStyle}></i>
+        <h3 >Students / Practitioners</h3>
         <ul>
             <li>Practical experience to support studies, research and work experience</li>
             <li>Opportunity to apply your academic knowledge and expert experience to make a tangible difference in the world</li>

@@ -10,9 +10,11 @@ render(){
     return (
 <div className={styles.whatWeOfferMain}>
     <h3>What We Offer</h3>
+    <div>
     <OfferStudents />
     <OfferCompanies />
     <OfferUniversities />
+    </div>
     <WeRecruit />
 
 </div>

@@ -76,6 +76,8 @@
   color: black;
   margin-top: -90px;
   /*margin-top: -90px;*/
+  border-radius: 25%;
+
   width: 160px;
 }
 .label {

@@ -3,6 +3,22 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
+const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
+
+exports.notifications = function(options) {
+  return {
+    plugins: [
+        new WebpackBuildNotifierPlugin({
+            title: "Worldef Webpack Build",
+            failureIcon: options.iconPath,
+            successIcon: './',
+            suppressSuccess: true,
+            failureSound:'/usr/share/sounds/ubuntu/notifications/Xylo.ogg',
+            sound:true,
+        })
+    ]
+  };
+}
 
 exports.indexTemplate = function(options) {
   return {
@@ -148,18 +164,30 @@ exports.setupCSS = function(paths) {
               loader: 'css-loader',
               query: {
                   modules: true,
+                  sourcemap: true
                 //   localIdentName: '[name]__[local]___[hash:base64:5]'
               }
-          }
-        // {
-        //   test: /\.css$/,
-        //   loaders: [
-        //       'style',
-        //       'css'
-        //   ],
-        //   include: paths,
-        //   query: { modules: true }
-        // }
+          },
+          {
+              test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+              loader: "url-loader?limit=10000&mimetype=application/font-woff"
+            },
+            {
+              test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+              loader: "url-loader?limit=10000&mimetype=application/font-woff"
+            },
+            {
+              test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+              loader: "url-loader?limit=10000&mimetype=application/octet-stream"
+            },
+            {
+              test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+              loader: "file-loader"
+            },
+            {
+              test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+              loader: "url-loader?limit=10000&mimetype=image/svg+xml"
+            }
       ]
     }
   };

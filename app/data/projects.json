@@ -6,13 +6,13 @@
         [
             {"order":1,
             "desc":"DESK RESEARCH",
-            "start":"2015-03-01", "end":"2015-04-01"},
+            "start":"2015-03-01", "end":"2015-04-01" , "fa":"fa-search"},
             {"order":2,
             "desc":"STAKEHOLDER ENGAGEMENT, SOURCING CAPACITY AND PROGRAM DESIGN.",
-            "start":"2015-04-01", "end":"2016-05-01"},
+            "start":"2015-04-01", "end":"2016-05-01" , "fa":"fa-pencil"},
             {"order":3,
             "desc":"ACTION STEPS: FIELD VISIT + AND FINAL REPORT FOR IMPLEMENTATION",
-            "start":"2015-05-15", "end":"2015-07-01"}
+            "start":"2015-05-15", "end":"2015-07-01" , "fa":"fa-plane"}
         ],
       "desc": "WE: SOLVE Lab is an open space, technology and design incubator focused on local youth creating local solutions. The ‘why’ is to maximize human and societal improvements in marginalized regions across the world.\n Local innovators harness the global community to build multiple tech solutions, which solve tangible problems. WE: SOLVE provides local entrepreneurs an environment and resources to explore, create and flourish, concentrating on building technical expertise and soft skills to approach their respective solutions. Proven concepts create livelihood opportunities along with new markets, along with data points to approach problems in multiple regions. To maintain sustainability, value added is reinserted into the program, ensuring a seamless sharing of best practices throughout each WE: SOLVE global node. The Education component is integrated in the process.",
       "focus":{
@@ -42,13 +42,13 @@
         [
         {"order":1,
         "desc":"DESK RESEARCH",
-        "start":"2015-04-14", "end":"2015-05-07"},
+        "start":"2015-04-14", "end":"2015-05-07", "fa":"fa-search"},
         {"order":2,
         "desc":"FIELD VISIT AND ON THE GROUND ENGAGEMENT WITH COMMUNITY AND POTENTIAL STAKEHOLDERS.",
-        "start":"2015-05-07", "end":"2015-05-21"},
+        "start":"2015-05-07", "end":"2015-05-21", "fa":"fa-plane"},
         {"order":3,
         "desc":"FEASIBILITY STUDY AND PROJECT INITIATION.",
-        "start":"2015-06-15", "end":"2015-09-01"}
+        "start":"2015-06-15", "end":"2015-09-01", "fa":"fa-flag"}
         ],
 
         "desc": "WE: KOLWEZI program aims to generate a current social and economic snapshot of the community Domaine Marial, while identifying possible start-up projects of Income-Generating Activities for alternative livelihoods of the beneficiaries of Good Shepherd Sisters in Kolwezi, DR Congo. The solution is to create a framework around livelihood identification and implementation, while recommending core solutions in thefarming and entrepreneurship sector of the community. The subsequent projects serve to be practical guidelines for expansion of opportunities for skills training and job creation, which will be sustainable for the individual beneficiaries and the community of Kolwezi, DR Congo. Farming activities will benefit 150 current community members, Micro-Enterprise activities will benefit 200 current community women and Solar Energy.",
@@ -63,9 +63,9 @@
             },
 
         "statistics": {
-            "WE:FARM ( 50% gender balance)":"150",
-            "WE:BUILD (Women)":"200",
-            "WE:SEE ( 50% gender balance)":"250"
+            "WE:FARM <br/>( 50% gender balance)":"150",
+            "WE:BUILD <br/>(Women)":"200",
+            "WE:SEE <br/>( 50% gender balance)":"250"
         }
     },
 
@@ -75,13 +75,19 @@
     [
       {"order":1,
       "desc":"FEASIBILITY STUDY CONDUCTED IN THE DRC AND BURUNDI",
-      "start":"June 2012"},
+      "start":"June 2012", "fa":"fa-book"},
     {"order":2,
       "desc":"PARTIAL LAND ALLOCATION",
-      "start":"August 2012"},
+      "start":"August 2012", "fa":"fa-location-arrow"},
     {"order":3,
       "desc":"NURSERY DEVELOPED NEAR ULVIRA, DR CONGO",
-      "start":"December 2013"}
+      "start":"December 2013", "fa":"fa-medkit"},
+      {"order":4,
+        "desc":"Project Development",
+        "start":"2014", "fa":"fa-gears"},
+        {"order":5,
+          "desc":"Partnership and Resource Allocation",
+          "start":"2015", "fa":"fa-group"}
     ], "desc": "Through the method of participatory community engagement, the WE Foundation is working to pull thousands of farmers and families out of poverty, while improving energy needs for increased human experiences. With current fossil-diesel arriving from Mombasa, Kenya (1,531 km), this project will supply local energy production and consumption; minimizing, security, transport and surcharge demands.This program aims to create 5,000+ direct and indirect jobs in the districts of the Ruzizi Valley and Fizi Mountains in the DRC. These regions were chosen for their geographical location to logistic networks, along with the availability of marginal lands to not compete with food crops. The program will concentrate heavily to prevent Biodiesel crops competing with food crops, instead creating a closed loop system, which provides energy and food for local beneficiaries. If there is a surplus, fuels can easily be exported to neighboring countries.\nThe 2 proposed sites will supply the region with over 3.5 million liters of biofuel, along with create a plethora of by-products. Each participant will increase their yearly income from 5 to 8 times their current capacity.",
     "focus":{
         "desc":"The 2 proposed sites will supply the region with over 3.5 million liters of biofuel, along with create a plethora of by-products. Each participant will increase their yearly income from 5 to 8 times their current capacityThe 2 proposed sites will supply the region with over 3.5 million liters of biofuel, along with create a plethora of by-products. Each participant will increase their yearly income from 5 to 8 times their current capacity.",
@@ -104,22 +110,22 @@
     [
         {"order":1,
         "desc":"FEASIBILITY STUDY/ PARTNERSHIP WITH UCLA’S SCHOOL OF PUBLIC AFFAIRS",
-        "start":"September 2010"},
+        "start":"September 2010", "fa":"fa-university"},
         {"order":2,
         "desc":"INITIATED",
-        "start":"March 2011"},
+        "start":"March 2011" , "fa":"fa-flag-o"},
         {"order":3,
         "desc":"FIRST TRANSPORT OF RAW QUININE MADE TO BUKAVU",
-        "start":"June 2011"},
+        "start":"June 2011" , "fa":"fa-truck"},
         {"order":4,
         "desc":"FIRST TREATMENTS DISTRIBUTED TO LOCAL CLINICS",
-        "start":"November 2011"},
+        "start":"November 2011" , "fa":"fa-ambulance"},
         {"order":5,
         "desc":"OVER 110 JOBS CREATED AND 76 TONS OF RAW QUININE DELIVERED",
-        "start":"December 2011", "end":"January 2015"},
+        "start":"December 2011", "end":"January 2015" , "fa":"fa-line-chart"},
         {"order":6,
         "desc":"OVER 450,000 TREATMENTS PRODUCED",
-        "start":"April 2015"}
+        "start":"April 2015" , "fa":"fa-flag"}
     ],
 
     "desc": "Nearly 80% of the participants have been able to increase their production and sell of quinine, within 3 months of entering the program. Along with saving thousands of lives from the end product, the program has created over 100 new direct or indirect jobs, in farming, pharmaceutical and transportation industries. Over 2 million trees have been planted to improve soil and water management. The project has succeeded in increasing the incomes of individuals in post-war regions, helping them improve their socio-economic sustainability.",
@@ -145,46 +151,25 @@
     "timeline":  [
         {"order":1,
         "desc":"WE FOUNDATION INTRODUCED TO HAITI PROJECT" ,
-        "start" : "August 2014"},
+        "start" : "August 2014" , "fa":"fa-flag-o"},
         {"order":2,
         "desc":"MEETING WITH 2 SENIOR ADVISOR TO THE UN " ,
-        "start" : "September 2014"},
+        "start" : "September 2014" , "fa":"fa-wechat"},
         {"order":3,
         "desc":"FIELD VISIT TO PORT AU PRINCE AND JACMEL HAITI " ,
-        "start" : "September 2014"},
+        "start" : "September 2014", "fa":"fa-plane"},
         {"order":4,
         "desc":"NATIONAL SCHOOL OF CYVADIER TESTED AND PLEASED WITH STOVE AND BRIQUETTES " ,
-        "start" : "November 2014"},
+        "start" : "November 2014", "fa":"fa-university"},
         {"order":5,
         "desc":"CHRISTMAS HOLIDAY EXPO AT THE CONVENTION CENTER " ,
-        "start" : "December 2014"},
+        "start" : "December 2014", "fa":"fa-eye"},
         {"order":6,
         "desc":"BUILD AUTOMATED PRESS TO MINIMIZE THE WORKFORCE ON BRIQUETTES’ PRODUCTION " ,
-        "start" : "2015"},
+        "start" : "2015", "fa":"fa-gears"},
         {"order":7,
         "desc":"CONSTRUCCION OF MORE SHELVES TO CREATE ADEQUATE DRYING SPACE FOR BRIQUETTES " ,
-        "start" : "2015"},
-        {"order":8,
-        "desc":"WE FOUNDATION INTRODUCED TO HAITI PROJECT " ,
-        "start" : "August 2014"},
-        {"order":9,
-        "desc":"MEETING WITH 2 SENIOR ADVISOR TO THE UN " ,
-        "start" : "September 2014"},
-        {"order":10,
-        "desc":"FIELD VISIT TO PORT AU PRINCE AND JACMEL HAITI " ,
-        "start" : "September 2014"},
-        {"order":11,
-        "desc":"NATIONAL SCHOOL OF CYVADIER TESTED AND PLEASED WITH STOVE AND BRIQUETTES " ,
-        "start" : "November 2014"},
-        {"order":12,
-        "desc":"CHRISTMAS HOLIDAY EXPO AT THE CONVENTION CENTER " ,
-        "start" : "December 2014"},
-        {"order":13,
-        "desc":"BUILD AUTOMATED PRESS TO MINIMIZE THE WORKFORCE ON BRIQUETTES’ PRODUCTION " ,
-        "start" : "2015"},
-        {"order":14,
-        "desc":"CONSTRUCCION OF MORE SHELVES TO CREATE ADEQUATE DRYING SPACE FOR BRIQUETTES" ,
-        "start" : "2015" }
+        "start" : "2015", "fa":"fa-gavel"}
     ],
 
     "desc": "The WE Foundation is providing a solution (coconut husk briquettes) to current deforestation due to cutting of trees in the use of charcoal for heating and cooking in the country of Haiti. WEF looks to support a local Haitian organization (Konpay) to expand a proven biomass option of coconut husk briquettes, to process and deliver 500,000 coconut husk briquettes to the Haitian market. This initiative allows Konpay to add an automated briquette press, which will allow Konpay to produce 500,000 briquettes per month. The population WE plan to serve is the country of Haiti, with implications for global impact. The coconut husk briquettes emit less CO2, burn safer and easier and are cheaper for the marginalized consumer who needs energy for cooking and heating. Local Haitian women and children will have the most direct benefit, by having an alternative to unsafe use of charcoal burning in and close to the house.The WE Foundation is currently working with Joe Duplan the director and head of operations of Konpay.",
@@ -269,19 +254,19 @@
      "timeline":  [
         {"order": 1,
         "desc":"FACT FINDING AND RELATIONSHIP BUILDING BETWEEN MOROCCO AND ALGERIA" ,
-        "start" : "February - November 2013"},
+        "start" : "February - November 2013", "fa":"fa-group"},
         {"order": 2,
         "desc":"FIELD VISIT TO LAYOUNNE AND DAHKLA" ,
-        "start" : "April 2014"},
+        "start" : "April 2014", "fa":"fa-plane"},
         {"order": 3,
         "desc":"FIELD VISIT TO TINDOUF REFUGEE CAMPS" ,
-        "start" : "September 2013"},
+        "start" : "September 2013", "fa":"fa-plane"},
         {"order": 4,
         "desc":"PROJECT DEVELOPMENT" ,
-        "start" : "2014"},
+        "start" : "2014", "fa":"fa-gears"},
         {"order": 5,
         "desc":"GENERATING PARTNERSHIPS WITH HARVARD GRADUATE SCHOOL OF EDUCATION" ,
-        "start" : "2014 - 2015"}
+        "start" : "2014 - 2015", "fa":"fa-university"}
     ],
 
     "desc": "The Sahel Youth Development project utilizes a human-centered design approach and participatory methods toensure that the participants become engaged and effective civic actors, along with building their capacity and understanding of the 7 pillars surrounding social responsibility and inclusion. The design approaches innovation, creativity, empowerment and youth-focused development strategies to solve personal and community problems.",

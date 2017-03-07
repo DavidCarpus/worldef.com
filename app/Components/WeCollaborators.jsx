@@ -2,6 +2,7 @@ import React from 'react';
 import collaborators from '../data/collaborators.json';
 import styles from './WeCollaborators.css';
 import CollaboratorThumbnail from './CollaboratorThumbnail';
+import BorderedLinkButton from './BorderedLinkButton';
 
 export default class WeCollaborators extends React.Component {
 render(){
@@ -16,7 +17,18 @@ render(){
                       />
                   )}
             </ul>
+            <div className={styles.buttonBar}>
+                <BorderedLinkButton url="https://wefoundation.typeform.com/to/eDMXH0"> Collaborate </BorderedLinkButton>
+                    <BorderedLinkButton url="http://worldef.com/donate/"> Donate </BorderedLinkButton>
+            </div>
+
         </section>
     )
     }
 }
+
+/*
+<BorderedLinkButton url="https://wefoundation.typeform.com/to/eDMXH0"> Collaborate </BorderedLinkButton>
+    <BorderedLinkButton url="http://worldef.com/donate/"> Donate </BorderedLinkButton>
+
+*/

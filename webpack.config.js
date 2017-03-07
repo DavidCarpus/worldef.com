@@ -12,7 +12,9 @@ const PATHS = {
   //   path.join(__dirname, 'app', 'main.css')
   // ],
   build: path.join(__dirname, 'build'),
-  test: path.join(__dirname, 'tests')
+  test: path.join(__dirname, 'tests'),
+  favicon: path.join(__dirname, 'images/favicon/favicon'),
+  buildIconPath: path.join(__dirname, 'images/favicon/favicon24.png'),
 };
 
 process.env.BABEL_ENV = TARGET;
@@ -34,12 +36,15 @@ const common = merge(
     }
   },
   parts.indexTemplate({
-    title: 'World Education Foundation',
+    title: 'World Education Foundation' ,
     appMountId: 'app'
   }),
   parts.loadJSX(PATHS.app),
   parts.lintJSX(PATHS.app),
-  parts.jsonData(PATHS.app)
+  parts.jsonData(PATHS.app),
+  parts.notifications({
+    iconPath: PATHS.buildIconPath,
+  })
 
 );
 

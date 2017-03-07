@@ -10,6 +10,17 @@ import ProjectStatistics from './ProjectStatistics';
 import {StickyContainer} from 'react-sticky';
 import HdrMenu from './HeaderMenu';
 
+class ProjectDesc extends React.Component {
+    render(){
+
+        return (
+            <div className={styles.projectDesc}>
+                {this.props.project.desc}
+            </div>
+        )
+    }
+}
+
 export default class Project extends React.Component {
     render(){
         var project =   projects.filter( (project)=>
@@ -46,10 +57,13 @@ export default class Project extends React.Component {
                     : '' }
                     </div>
 
-                    <ProjectSlideshow projectID={project.id} />
+                    {project.slideshow
+                        ? <ProjectSlideshow projectID={project.id} slideshowName={project.slideshow} />:''}
+
+
+                        <ProjectDesc project={project}/>
 
                     <div>
-                        {project.desc}
                         {project.focus
                             ? <ProjectFocus project={project}/>:''}
 
@@ -57,6 +71,7 @@ export default class Project extends React.Component {
                             ? <ProjectStatistics project={project}/>:''}
 
                         <ProjectInitiated project={project}/>
+
                         <ProjectTimeline project={project}/>
                     </div>
             </section>
@@ -65,4 +80,8 @@ export default class Project extends React.Component {
     )
     }
 }
-// <ProjectSlideshow projectID={project.id} />
+
+/*
+{project.slideshow
+    ? <ProjectSlideshow projectID={project.id} slideshowName={project.slideshow} />:''}
+*/

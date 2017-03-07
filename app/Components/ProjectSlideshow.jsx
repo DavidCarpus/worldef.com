@@ -1,147 +1,143 @@
 import React from 'react';
-// import Slider from 'react-slick';
 import styles from './projectSlideshow.css';
 import slideshow from '../data/slideshow.json'
 var classNames = require('classnames');
 
-var Slides = React.createClass({
-  render: function() {
-    var slidesNodes = this.props.data.map(function (slideNode, index) {
-    var isActive = this.state.currentSlide === index;
-      return (
-        <Slide active={isActive} key={slideNode.id} imagePath={slideNode.imagePath} imageAlt={slideNode.imageAlt} title={slideNode.title} subtitle={slideNode.subtitle} text={slideNode.text} action={slideNode.action} actionHref={slideNode.actionHref} />
-      );
-    });
-    return (
-      <div className="slides">
-        {slidesNodes}
-      </div>
-    );
-  }
-});
-
-var Slide = React.createClass({
-  render: function() {
-    var classes = classNames({
-      'slide': true,
-      'slide--active': this.props.active
-    });
-    return (
-      <div className={classes}>
-        <img src={this.props.imagePath} alt={this.props.imageAlt} />
-        <h2>{this.props.title}</h2>
-        <h3>{this.props.subtitle}</h3>
-        <p>{this.props.text}</p>
-        <a href={this.props.actionHref}>{this.props.action}</a>
-      </div>
-    );
-  }
-});
-
 export default class ProjectSlideshow extends React.Component {
-
-  slideshow(slideshowData) {
-      if (slideshowData != null ) {
-          return (
-              slideshowData.images.sort((a, b) => {
-                  return a.order - b.order;
-              }).
-              filter( (image)=> {return image.order == 2} ).
-              map( (image, index) =>
-              <figure key={index}>
-                  <img src={`images/projects/${image.img}`}  />
-              </figure>
-              )
-          )
-      } else {
-          return ('')
-      }
-
+    translateImgToURI(img){
+        if (img.toUpperCase().endsWith('.PNG') || img.toUpperCase().endsWith('.JPG')) {
+            return 'images/projects/'+img;
+        } else {
+            // https://confluence.biola.edu/display/itservices/How+to+Embed+Images+from+Google+Drive+in+a+Web+Page
+            return 'http://drive.google.com/uc?export=view&id=' + img;
+        }
     }
 
+    loadURLs(slideshowName){
+        var currentProject = (this.state && this.state.currentProject) || 0;
+        if(currentProject == slideshowName && this.state.data != null) {
+            return this.state.data;
+        }
+        // console.log('Loading urls for project ' + slideshowName);
+        var images = slideshow.filter( (image)=> {return image.name ==slideshowName} )
+        if (images.length ) { images = images[0].images }
+        var slideshowData =
+             images.
+             sort((a, b) => {
+               return a.order - b.order;
+             }).
+             map( (image, index) => {
+               return {
+                   'url': this.translateImgToURI(image.img),
+                   'id':index
+               }
+             } );
+
+             return slideshowData;
+    }
+
+    constructor(props) {
+        super(props);
+            var slideshowData = this.loadURLs(props.slideshowName)
+
+            this.state = {
+                data:slideshowData,
+                currentProject:props.slideshowName,
+                displayID: 1
+            };
+            // console.log(JSON.stringify(this.state));
+    }
+
+    componentDidMount() {
+       var intervalId = setInterval(this.timer.bind(this), 5000);
+    //    var slideshowData = this.loadURLs(this.props.slideshowName)
+       this.setState( {
+        //    currentProject:this.props.slideshowName,
+        //    data:slideshowData,
+        //    displayID: 0,
+           // store intervalId in the state so it can be accessed later:
+           intervalId: intervalId
+       });
+    }
+
+    componentWillUnmount() {
+       // use intervalId from the state to clear the interval
+       clearInterval(this.state.intervalId);
+    }
+
+    timer() {
+       // setState method is used to update the state
+        var displayID = this.state.displayID || 0;
+        if (displayID >= (this.state.data != null ? this.state.data.length: 0) - 1) {
+            displayID = 0
+        }
+        displayID += 1;
+        var slideshowData = this.loadURLs(this.props.slideshowName)
+        //  this.setState({data:slideshowData, displayID:0, currentProject: slideshowName})
+       this.setState({
+           data:slideshowData,
+            displayID: displayID,
+            currentProject: this.props.slideshowName
+        });
+        // console.log(this.state);
+        // console.log(this.__proto__.constructor.name + ':timer()' );
+        // console.log('(' + displayID + ')' );
+        // if (this.state.data != null) { console.log( displayID + 'of' + this.state.data.length );}
+    }
 
   render () {
-      var slideshowData = slideshow.filter( (image)=> {return image.id == this.props.projectID} )[0];
-
       var style1 = {
           width:'100%',
           height:'400px'
       };
-    //
-    // var settings = {
-    //   dots: true,
-    //   infinite: true,
-    //   speed: 500,
-    //   slidesToShow: 1,
-    //   slidesToScroll: 1
-    // };
+
+    var figures = '';
+    var slideshowData = this.state.data
+    var displayID= this.state.displayID
+    var currentProject= this.state.currentProject
+
+    if (slideshowData == null || currentProject != this.props.slideshowName){
+        console.log('Force load slideshowData ' + this.props.slideshowName);
+        slideshowData = this.loadURLs(this.props.slideshowName)
+        displayID=1
+        currentProject = this.props.slideshowName
+    }
+    // http://andrewhfarmer.com/detect-image-load/
+        //   onLoad={this.handleImageLoaded.bind(this)}
+        //   onError={this.handleImageErrored.bind(this)}
+
+    if (slideshowData != null){
+        if (currentProject == this.props.slideshowName) {
+            // console.log('Load images: ' + this.props.slideshowName);
+            figures = slideshowData.
+            filter( (image)=> {return image.id ==displayID} ).
+            map( (image) =>
+                <figure key={image.id}>
+                        <img src={image.url}  />
+                </figure>
+            );
+        } else {
+            console.log('skipping... project ' + this.props.slideshowName + ' not equal to ' + currentProject);
+            figures = ''
+        }
+    }
+
     return (
         <div style={style1}>
             <div className={styles.container} >
-                {this.slideshow(slideshowData)}
+                {figures}
             </div>
     </div>
     );
   }
 }
 
-// <Slider {...settings}>
-//   <div><img src='http://placekitten.com/g/400/200' /></div>
-//   <div><img src='http://placekitten.com/g/400/200' /></div>
-// </Slider>
-
-// import 'react-image-gallery/styles/css/image-gallery.css';
-// import ImageGallery from 'react-image-gallery';
-//
-// export default class ProjectSlideshow extends React.Component {
-//   handleImageLoad(event) {
-//     console.log('Image loaded ', event.target)
-//   }
-//
-//   render() {
-//     const images = [
-//       {
-//         original: 'http://lorempixel.com/1000/600/nature/1/',
-//         thumbnail: 'http://lorempixel.com/250/150/nature/1/',
-//       },
-//       {
-//         original: 'http://lorempixel.com/1000/600/nature/2/',
-//         thumbnail: 'http://lorempixel.com/250/150/nature/2/'
-//       },
-//       {
-//         original: 'http://lorempixel.com/1000/600/nature/3/',
-//         thumbnail: 'http://lorempixel.com/250/150/nature/3/'
-//       }
-//     ]
-//
-//     return (
-//       <ImageGallery
-//         items={images}
-//         slideInterval={2000}
-//         onImageLoad={this.handleImageLoad}/>
-//     );
-//   }
-// }
 
 //
-// export default class ProjectSlideshow extends React.Component {
-//
-//     render(){
-//         var slideshowData = slideshow.filter( (image)=> {return image.id == this.props.projectID} )[0];
-//
-//         return (
-//             <div  id='projectSlideshow'>
-//                 <div className={styles.bssslides} >
-//                     {slideshowData.images.sort((a, b) => {
-//                         return a.order - b.order;
-//                     }).map(image =>
-//                         <figure>
-//                             <img src={`images/projects/${image.img}`}  />
-//                         </figure>
-//                     )}
-//                 </div>
-//             </div>
-//             )
-//         }
-// }
-// <figcaption>$caption</figcaption>
+// var settings = {
+//   dots: true,
+//   infinite: true,
+//   speed: 500,
+//   slidesToShow: 1,
+//   slidesToScroll: 1
+// };

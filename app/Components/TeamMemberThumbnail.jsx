@@ -68,7 +68,7 @@ export default class TeamMemberThumbnail extends React.Component {
                     className={styles.labelblock}
                     style={labelStyle}
                     >
-                    {teamMember.name}<br/>
+                    {teamMember.name}<hr/>
                     {teamMember.title}
                 </div>
             </Link>

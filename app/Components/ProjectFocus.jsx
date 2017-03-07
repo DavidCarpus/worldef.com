@@ -11,7 +11,7 @@ export default class ProjectFocus extends React.Component {
         )
 
         return (
-            <div>
+            <div className={styles.projectFocus}>
                 <h2>Focus</h2>
                 {this.props.project.focus.desc}
                 <br/>
