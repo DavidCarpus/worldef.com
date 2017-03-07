@@ -24,6 +24,7 @@ export default class HeaderMenu extends React.Component {
                     color: (isSticky)?'white':'black',
                     backgroundColor: (isSticky)?'black':'',
                     height: (isSticky)?'80px':'',
+                    // opacity:'0.5'
                 }
               }
           )

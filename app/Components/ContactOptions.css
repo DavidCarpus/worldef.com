@@ -1,0 +1,20 @@
+.socialMedia {
+    text-align: center
+}
+.traditional {
+    text-align: center;
+    background-color: #ecf1f2;
+    padding: 20px 0px;
+    line-height: 2em;
+    /*background-color: red;*/
+}
+.iconStyle {
+    font-size: 44px;
+    padding: 20px 0px;
+    margin:0 50px;
+}
+@media bp-iphone5 {
+    .traditional {
+        font-size: 4vmin;        
+    }
+}

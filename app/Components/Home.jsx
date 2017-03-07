@@ -9,8 +9,50 @@ import WhatWeOffer from './WhatWeOffer';
 import WeCollaborators from './WeCollaborators';
 import WeTeam from './WeTeam';
 import {StickyContainer} from 'react-sticky';
+import fa from 'font-awesome/css/font-awesome.css';
+import styles from './ContactOptions.css';
 
-// <BkgImg image="./images/WE-SHOWCASE-Gr--NN-Hj--rnet-1-7.jpg" />
+class ContactOptions extends React.Component {
+    render(){
+        const tumblr={ color: 'red' }
+        const twitter={ color: '#1da1f2' }
+        const facebook={ color: '#4267b2' }
+
+
+        return(
+            <div >
+                <div className={styles.socialMedia}>
+                    <a href='http://www.twitter.com/W_E_Foundation'>
+                    <i className={[fa['fa-twitter-square'],fa['fa'], styles.iconStyle].join(' ')}
+                        style={twitter}></i>
+                    </a>
+                    <a href='https://www.facebook.com/WEFoundation/?fref=ts'>
+                    <i className={[fa['fa-facebook-official'],fa['fa'],styles.iconStyle].join(' ')}
+                        style={facebook}></i>
+                    </a>
+                    <a href='http://www.globalmarques.tumblr.com/'>
+                    <i className={[fa['fa-tumblr-square'],fa['fa'],styles.iconStyle].join(' ')}
+                        style={tumblr}></i>
+                    </a>
+                </div>
+                <div className={styles.traditional}>
+                    <p>
+                        <i className={[fa['fa-envelope'],fa['fa']].join(' ')}
+                            ></i> -
+                        post@worldef.Component
+                        <br/>
+                        <i className={[fa['fa-phone'],fa['fa']].join(' ')}
+                            ></i> -
+                        WE Foundation org. number 915 548 423
+                        <br/>
+                        EIN number: 80-0332342
+                    </p>
+                </div>
+            </div>
+        )
+    }
+
+}
 
 export default class Home extends React.Component {
 
@@ -30,10 +72,19 @@ export default class Home extends React.Component {
 
                 <MissionAndVision />
 
-                <BkgImg image="./images/100years-22.jpg" />
+                <BkgImg
+                    image="./images/100years-22.jpg"
+                    padding='0px'
+                    position='0px 80px'
+                    height='500px'
+                    />
                 <WeProjects />
 
-                <BkgImg image="./images/MG_4151.jpg" >
+                <BkgImg image="./images/MG_4151.jpg"
+                    padding='120px'
+                    position='0px 80px'
+                    height='500px'
+                    >
                 <KafkaQuote />
                 </BkgImg >
 
@@ -41,6 +92,8 @@ export default class Home extends React.Component {
                 <WeCollaborators />
 
                 <WeTeam />
+
+                <ContactOptions />
             </StickyContainer>
     )
 }

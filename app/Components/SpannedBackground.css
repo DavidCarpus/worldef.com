@@ -13,9 +13,9 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
          /*backgroundSize: 'cover';*/
+         /*backgroundSize: 'contain';*/
         opacity: 1.0;
         background-size: 100%;
-         /*backgroundSize: 'contain';*/
     }
 @media bp-iphone5 {
     .container {

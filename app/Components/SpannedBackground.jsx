@@ -7,8 +7,21 @@ render(){
          backgroundImage: 'url(' + this.props.image + ')',
      }
      var paddingStyle={
-        marginTop:'120px'
      }
+     if (this.props.padding) {
+          paddingStyle.paddingTop= this.props.padding
+     }
+     if (this.props.position) {
+          imageStyle.backgroundPosition= this.props.position
+        //   imageStyle.height= '400px'
+     }
+     if (this.props.height) {
+          paddingStyle.height= this.props.height
+        //   imageStyle.height= '400px'
+     }
+
+     console.log(JSON.stringify(paddingStyle));
+     console.log(JSON.stringify(imageStyle));
 
     return (
         <div
