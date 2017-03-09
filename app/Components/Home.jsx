@@ -36,7 +36,7 @@ class ContactOptions extends React.Component {
                     </a>
                 </div>
                 <div className={styles.traditional}>
-                        <p><i className={[fa['fa-envelope'],fa['fa']].join(' ')}></i> - post@worldef.Component  </p>
+                        <p><i className={[fa['fa-envelope'],fa['fa']].join(' ')}></i> - post@worldef.Com</p>
                         <p><i className={[fa['fa-phone'],fa['fa']].join(' ')}></i> -WE Foundation org. number 915 548 423</p>
                         <p>EIN number: 80-0332342</p>
                 </div>
@@ -54,6 +54,8 @@ export default class Home extends React.Component {
     // World Education Foundation
 
   render(){
+    //   <WeProjects />
+    // <KafkaQuote />
       const currYear=new Date().getFullYear()
       return(
             <StickyContainer>
@@ -63,35 +65,65 @@ export default class Home extends React.Component {
 
                 <BkgImg
                     image="./images/WE-SHOWCASE-Gr--NN-Hj--rnet-1-7.jpg"
-                    height='700px'
+                    position='0px 80px'
+                    padding='0px'
+                    height='701px'
                     />
 
+                    <MissionAndVision />
+
+                    <BkgImg
+                        image="./images/100years-22.jpg"
+                        padding='0px'
+                        position='0px 80px'
+                        height='502px'
+                        />
+                    
+                    <WeProjects />
+
+                    <BkgImg image="./images/MG_4151.jpg"
+                        padding='20px'
+                        height='503px'
+                        >
+                        <KafkaQuote />
+                    </BkgImg >
+
+                    <WhatWeOffer />
+                    <WeCollaborators />
+
+                    <WeTeam />
+                    <ContactOptions />
+                    &copy; {currYear} World Education Foundation
+
+            </StickyContainer>
+    )
+}
+}
+
+/*
                 <MissionAndVision />
 
                 <BkgImg
                     image="./images/100years-22.jpg"
                     padding='0px'
                     position='0px 80px'
-                    height='500px'
+                    height='502px'
                     />
-                <WeProjects />
+                    <WeProjects />
+
 
                 <BkgImg image="./images/MG_4151.jpg"
                     padding='20px'
-                    position='0px 80px'
-                    height='500px'
+                    height='503px'
                     >
-                <KafkaQuote />
+                    <KafkaQuote />
                 </BkgImg >
 
                 <WhatWeOffer />
                 <WeCollaborators />
 
                 <WeTeam />
-
                 <ContactOptions />
                 &copy; {currYear} World Education Foundation
-            </StickyContainer>
-    )
-}
-}
+
+                */

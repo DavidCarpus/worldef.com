@@ -11,36 +11,36 @@ export default class HeaderMenu extends React.Component {
 
       this.state = {
         headerStyle: {
-            color: 'black'
+            color: 'white',
+            backgroundColor: 'black',
         }
       }
     }
 
-    onStickyStateChange(isSticky) {
-    //   console.log(`Am I sticky?: ${ isSticky ? 'Yep!' : 'Nope!'}`);
-          this.setState(
-              {
-                headerStyle: {
-                    color: (isSticky)?'white':'black',
-                    backgroundColor: (isSticky)?'black':'',
-                    height: (isSticky)?'80px':'',
-                    // opacity:'0.5'
-                }
-              }
-          )
-    }
+    // onStickyStateChange(isSticky) {
+    // //   console.log(`Am I sticky?: ${ isSticky ? 'Yep!' : 'Nope!'}`);
+    //       this.setState(
+    //           {
+    //             headerStyle: {
+    //                 color: (isSticky)?'white':'black',
+    //                 backgroundColor: (isSticky)?'black':'',
+    //                 height: (isSticky)?'100px':'',
+    //                 // opacity:'0.5'
+    //             }
+    //           }
+    //       )
+    // }
     // <div className={ styles.menuHeader }>
     // topOffset={300}
     // <div className={ styles.caption }>
+    // onStickyStateChange={this.onStickyStateChange.bind(this)}
 
     render(){
         // var out = JSON.stringify(this.state.headerStyle);
         // console.log(out);
         var style = this.state.headerStyle;
         return (
-            <Sticky
-                onStickyStateChange={this.onStickyStateChange.bind(this)}
-                >
+            <Sticky>
             <header style={style} className={ styles.menuHeader }>
                 <div className={styles.logo}>
                     <div className={styles.logoImage}>

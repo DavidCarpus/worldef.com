@@ -5,13 +5,11 @@ import fa from 'font-awesome/css/font-awesome.css';
 export default class OfferUniversities extends React.Component {
 
 render(){
-    const iconStyle={
-        fontSize:'44px',
-        margin:'0 50%'
-    }
     return (
         <div  className={styles.universities} >
-            <i className={[fa['fa-institution'],fa['fa']].join(' ')} style={iconStyle}></i>
+                <div className={styles.icon}>
+                <i className={[fa['fa-institution'],fa['fa'], styles.icon].join(' ')} ></i>
+                </div>
 
             <h3>Universities</h3>
             <ul>

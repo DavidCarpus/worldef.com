@@ -8,16 +8,12 @@ import styles from './WhatWeOffer.css';
 export default class WhatWeOffer extends React.Component {
 render(){
     return (
-<div className={styles.whatWeOfferMain}>
-    <h2>What We Offer</h2>
-    <div>
-    <OfferStudents />
-    <OfferCompanies />
-    <OfferUniversities />
-    </div>
-    <WeRecruit />
-
-</div>
+        <div className={styles.whatWeOfferMain}>
+            <h2>What We Offer</h2>
+            <OfferStudents />
+            <OfferCompanies />
+            <OfferUniversities />
+        </div>
     )
     }
 }

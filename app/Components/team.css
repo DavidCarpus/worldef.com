@@ -1,4 +1,4 @@
-@value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5 as from "./breakpoints.css";
+@value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5, iphone6 as bp-iphone6  from "./breakpoints.css";
 
 .teamMain {
     display: inline-block;
@@ -18,9 +18,10 @@
     width: 100%;
 }
 .detailNext{
-    background-color: blue;
+    background-color: grey;
     color: white;
     text-decoration: none;
+    font-size: 3vmin;
     float: right;
 }
 .detailNext:after{
@@ -28,8 +29,9 @@
     margin-left: 6px;
 }
 .detailPrev{
-    background-color: blue;
+    background-color: grey;
     text-decoration: none;
+    font-size: 3vmin;
     color: white;
     float: left;
 }
@@ -40,12 +42,12 @@
 
 .teamDetailPhoto {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 150px;
     /*background-color: red;*/
     align-content: center;
 }
 .teamDetailPhoto img{
-    max-width: 300px;
+    max-width: 400px;
     border-radius: 5%;
     display:block;
    margin:auto;
@@ -86,6 +88,7 @@
 .labelH {
     color: white;
 }
+
 @media bp-iphone5 {
     .thumbnailBlock {
         margin: 0px 35px 35px 0px;
@@ -104,5 +107,25 @@
         width: 100%;
         height: 100%;
     }
+    p, h3{
+      font-size: 4vmin;
+    }
+    li{
+      font-size: 3vmin;
+    }
+    h2{
+      font-size: 8vmin;
+    }
 
+}
+@media bp-iphone6{
+    p, h3{
+      font-size: 4vmin;
+    }
+    li{
+      font-size: 3vmin;
+    }
+    h2{
+      font-size: 8vmin;
+    }
 }

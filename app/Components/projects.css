@@ -3,7 +3,7 @@
 .projectThumbnail {
     float: left;
     width: 200px;
-    padding-right: 20px;
+    padding-right: 2%;
     margin-left: 25px;
     /*background-color: green;*/
 }
@@ -71,7 +71,6 @@ h2{
       padding: 0px 20px;
   }
   .projectsMain {
-      /*background-color: red;*/
       display: inline-block;
       /*margin-bottom: 0px;*/
       background-color: #ecf1f2;
@@ -79,10 +78,12 @@ h2{
   .projectsMain h3{
       text-align: center;
   }
+
+
   @media bp-iphone5 {
       .projectThumbnail {
-          height: 250px;
           width: 100%;
+          padding-right: 0px;
           padding-bottom: 80px;
           /*background-color: green;*/
       }
@@ -98,7 +99,7 @@ h2{
           left: 45%;
       }
       .tooltip {
-          left: 15%;
+          /*left: 15%;*/
           /*width: 250px;*/
       }
 
@@ -108,10 +109,11 @@ h2{
 
   .navigationBlock{
       display: inline-block;
+      padding-top: 50px;
       width: 100%;
   }
 .detailNext{
-      background-color: blue;
+      background-color: grey;
       color: white;
       text-decoration: none;
       float: right;
@@ -121,7 +123,7 @@ h2{
       margin-left: 6px;
   }
   .detailPrev{
-      background-color: blue;
+      background-color: grey;
       text-decoration: none;
       color: white;
       float: left;
@@ -150,7 +152,7 @@ h2{
 
 
 .projectStatistic{
-    width: 180px;
+    width: 190px;
     margin-bottom: 20px;
     text-align: center;
     vertical-align: top;
@@ -160,14 +162,19 @@ h2{
 .projectStatisticDesc{
     vertical-align: top;
     font-weight: bold;
-    max-height: 150px;
+    height: 100%;
+
     /*background-color: blue;*/
 }
 .projectStatisticValue{
     vertical-align: bottom;
     position: relative;
+    /*position: absolute;*/
+    bottom: 0;
+    height: 80px;
+    /*background-color: red;*/
     /*height: 100%;*/
-    margin: auto;
+    /*margin: auto;*/
 }
 .projectStatisticBlock{
     width: 90%;
@@ -178,14 +185,19 @@ h2{
 @media bp-iphone5 {
     .projectStatisticBlock {
             width: 100%;
-          font-size: 3vmin;
+          font-size: 5vmin;
         }
-        .projectStatisticDesc{
-            height: 100px;
+        .projectStatistic{
+            width: 25%;
         }
+        /*.projectStatisticDesc{
+            height: 80%;
+            max-height: 300px;
+            height: 300px;
+        }*/
         .timelineBlockContent{
             width: 100%;
-            font-size: 3vmin;
+            font-size: 5vmin;
         }
         .timelineBlockSide{
             width: 100%;

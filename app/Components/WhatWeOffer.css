@@ -1,20 +1,29 @@
-@value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5 as from "./breakpoints.css";
+@value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5, iphone6 as bp-iphone6 as from "./breakpoints.css";
+@value bodyFontFamily, bodySize, bodyWeight from "./fonts.css";
 
 .whatWeOfferMain {
     display: inline-block;
     background-color: #ecf1f2;
-    /*background-color: blue;*/
+    font-family: bodyFontFamily;
+    font-size:  bodySize;
+    font-weight: bodyWeight;
+
+    /*background-color: red;*/
+    /*margin-left: 10px;*/
     width: 100%;
 }
 .whatWeOfferMain h3 {
     text-align: center;
 }
+.icon {
+    font-size: 44px;
+    text-align: center;
+}
+
 .students, .companies, .universities {
     float: left;
-    width: 33%;
+    /*width: 33%;*/
     width: calc(100% / 3);
-    display: block;
-    /*background-color: green;*/
 }
 .weRecruit {
     width: 100%;
@@ -23,10 +32,11 @@
     margin-bottom: 30px;
     /*background-color: red;*/
 }
-
-@media bp-iphone5 {
+@media bp-iphone6{
     .students, .companies, .universities {
-      width: 100%;
+        width: 96%;
+        padding-left: 4%;
+        padding-top: 100px;
     }
     p, h3{
       font-size: 4vmin;
@@ -35,6 +45,23 @@
       font-size: 3vmin;
     }
     h2{
-      font-size: 5vmin;
+      font-size: 6vmin;
+    }
+}
+
+@media bp-iphone5 {
+    .students, .companies, .universities {
+      width: 96%;
+      padding-left: 4%;
+      padding-top: 100px;
+    }
+    p, h3{
+      font-size: 4vmin;
+    }
+    li{
+      font-size: 3vmin;
+    }
+    h2{
+      font-size: 8vmin;
     }
   }
