@@ -5,9 +5,10 @@
 @import url('//fonts.googleapis.com/css?family=Open+Sans%3A400%2C500%2C600&#038;ver=4.6.3');
 
 @value headFont: 'Patua One', sans-serif;
-@value bodyFont: 'Inika', serif;
+@value bodyFont: 'Open Sans', serif;
 @value bodySize: 16px;
 @value bodyWeight: 600;
+@value textFont: 16px 'Open Sans', serif;
 
 /*$headFont : 'Patua One', sans-serif;
 $bodyFont : 'Inika', serif;*/
@@ -16,7 +17,12 @@ body {
   background-color: cornsilk;
 
   /*font-family: 'Open Sans';*/
-  font-family: @bodyFont;
+  /*font-family: @bodyFont;*/
+  font: textFont;
+}
+h2, h3, p {
+  font-family: bodyFont;
+  font-weight: 300;
 }
 
 /*<link rel='stylesheet' id='tp-opensans-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C300italic%2C400italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&#038;ver=4.6.3' type='text/css' media='all' />

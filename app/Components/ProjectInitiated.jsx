@@ -16,7 +16,7 @@ export default class ProjectInitiated extends React.Component {
             <div className={styles.projectInitiated}
                 >
                 <h2>Initiated</h2>
-                { (this.props.project.initiated != null ) ? this.props.project.initiated.desc : 'TBD'}
+                <p>{ (this.props.project.initiated != null ) ? this.props.project.initiated.desc : 'TBD'}</p>
                 <br/>
                 <ul>{out}</ul>
             </div>

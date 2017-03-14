@@ -1,8 +1,17 @@
 @value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5, iphone6 as bp-iphone6  from "./breakpoints.css";
 
+@value headFont: 'Patua One', sans-serif;
+@value bodyFont: 'Open Sans', serif;
+/*@value bodyFont: 'Inika', serif;*/
+@value bodySize: 16px;
+@value bodyWeight: 600;
+@value textFont: 16px 'Open Sans', serif;
+
 .teamMain {
     display: inline-block;
     background-color: #ecf1f2;
+    font-family: bodyFont;
+
     /*background-color: blue;*/
     width: 100%;
 }
@@ -15,6 +24,7 @@
     height: 30px;
     display: inline-block;
     display: block;
+    font: textFont;
     width: 100%;
 }
 .detailNext{
@@ -51,6 +61,10 @@
     border-radius: 5%;
     display:block;
    margin:auto;
+}
+.teamDetailText {
+    width: 80%;
+    margin: 0 auto;   
 }
 
 .thumbnailBlock {

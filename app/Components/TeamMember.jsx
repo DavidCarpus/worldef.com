@@ -15,8 +15,43 @@ class TeamMemberTextHeader extends React.Component {
         </div>
         );
     }
-
 }
+class NavigationBlock extends React.Component {
+    render(){
+        var teamMember =   team.filter( (teamMember)=>
+                      {return teamMember.id == this.props.teamMemberID} )[0]
+        var prevMember = team.filter( (teamMember)=>
+            {return teamMember.active && teamMember.id < this.props.teamMemberID} ).slice(-1)[0];
+        var nextMember = team.filter( (teamMember)=>
+            {return teamMember.active && teamMember.id > this.props.teamMemberID} )[0];
+        return (
+            <div
+                className={ styles.navigationBlock }
+                >
+                <div
+                    className={ styles.navigationBlock }
+                    >
+                {(prevMember != null) ?
+                    <Link
+                        className={ styles.detailPrev }
+                        to={`teamMember/${prevMember.id}`} >
+                        {prevMember.name}
+                    </Link>
+                    : '' }
+                {(nextMember != null) ?
+                        <Link
+                            className={ styles.detailNext }
+                            to={`teamMember/${nextMember.id}`}
+                            >
+                            {nextMember.name}
+                        </Link>
+                    : '' }
+                    </div>
+                </div>
+        );
+    }
+}
+
 export default class TeamMember extends React.Component {
     imageLink = (team) => {
         if (team.img) {
@@ -36,18 +71,7 @@ render(){
     var teamMember =   team.filter( (teamMember)=>
                   {return teamMember.id == this.props.params.teamMemberID} )[0]
     var teamMemberText=this.team_member_text(teamMember);
-    var prevMember = team.filter( (teamMember)=>
-        {return teamMember.active && teamMember.id < this.props.params.teamMemberID} ).slice(-1)[0];
-    var nextMember = team.filter( (teamMember)=>
-        {return teamMember.active && teamMember.id > this.props.params.teamMemberID} )[0];
-
-        // <HdrMenu >
-        //     {teamMember.name}
-        //         -
-        //         {teamMember.title}
-        // </HdrMenu >
-
-        var headerText = teamMember.name + ' - ' +  teamMember.title
+    var headerText = teamMember.name + ' - ' +  teamMember.title
     return (
         <StickyContainer>
 
@@ -56,35 +80,14 @@ render(){
                     <TeamMemberTextHeader teamMember={teamMember} />
                     </HdrMenu >
 
-                    <div
-                         className={ styles.teamDetailPhoto }
-                         >
-                        <img  src={this.imageLink(teamMember)}
-                            />
+                    <div className={ styles.teamDetailPhoto } >
+                        <img  src={this.imageLink(teamMember)} />
                     </div>
+                    <NavigationBlock teamMemberID={this.props.params.teamMemberID}/>
 
-                    <div
-                        className={ styles.navigationBlock }
-                        >
-                    {(prevMember != null) ?
-                        <Link
-                            className={ styles.detailPrev }
-                            to={`teamMember/${prevMember.id}`} >
-                            {prevMember.name}
-                        </Link>
-                        : '' }
-                    {(nextMember != null) ?
-                            <Link
-                                className={ styles.detailNext }
-                                to={`teamMember/${nextMember.id}`}
-                                >
-                                {nextMember.name}
-                            </Link>
-                        : '' }
+                        <div className={ styles.teamDetailText } >
+                            <p dangerouslySetInnerHTML={{__html: teamMemberText}} ></p>
                         </div>
-
-
-                <p dangerouslySetInnerHTML={{__html: teamMemberText}} ></p>
 
         </section>
     </StickyContainer>

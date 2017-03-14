@@ -15,7 +15,7 @@ class ProjectDesc extends React.Component {
 
         return (
             <div className={styles.projectDesc}>
-                {this.props.project.desc}
+                <p>{this.props.project.desc}</p>
             </div>
         )
     }
