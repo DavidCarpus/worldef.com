@@ -20,8 +20,8 @@ render(){
         //   imageStyle.height= '400px'
      }
 
-     console.log(JSON.stringify(paddingStyle));
-     console.log(JSON.stringify(imageStyle));
+    //  console.log(JSON.stringify(paddingStyle));
+    //  console.log(JSON.stringify(imageStyle));
 
     return (
         <div

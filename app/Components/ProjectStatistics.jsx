@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './projects.css';
+// import styles from './projects.css';
+import styles from './ProjectStatistics.css';
 
 // <li>{this.props.statistic} = {this.props.value} </li>
 

@@ -6,6 +6,11 @@
 @value bodySize: 16px;
 @value bodyWeight: 600;
 @value textFont: 16px 'Open Sans', serif;
+@value thumbnailHeight: 160px;
+@value invThumbnailHeight: -160px;
+@value halfTNHeight: 80px;
+@value thumbLabelTop: -165px;
+
 
 .teamMain {
     display: inline-block;
@@ -58,20 +63,21 @@
 }
 .teamDetailPhoto img{
     max-width: 400px;
+    max-width: calc(100% / 2);
     border-radius: 5%;
     display:block;
    margin:auto;
 }
 .teamDetailText {
     width: 80%;
-    margin: 0 auto;   
+    margin: 0 auto;
 }
 
 .thumbnailBlock {
     /*background-color: green;*/
     margin: 0px 35px 20px 0px;
-    width: 160px;
-    height: 160px;
+    width: thumbnailHeight;
+    height: thumbnailHeight;
     float: left;
 }
 .thumbnailBlock a {
@@ -80,22 +86,42 @@
 .thumbnailBlock img {
     display: inline-block;
     border-radius: 50%;
-    width: 160px;
-    height: 160px;
+    width: thumbnailHeight;
+    height: thumbnailHeight;
     /*background-color: blue;*/
 }
-.thumbnailBlock .labelblock{
- /*background-color: blue;*/
-  position: relative;
+.thumbnailBlock {
+ position: relative;
   margin: auto;
-  text-align: center;;
+  text-align: center;
+  padding-right: 2%;
   color: black;
-  margin-top: -90px;
-  /*margin-top: -90px;*/
-  border-radius: 25%;
-
-  width: 160px;
+  height: thumbnailHeight;
+  width: thumbnailHeight;
 }
+.labelblock{
+    height: thumbnailHeight;
+    width: thumbnailHeight;
+    /*margin-top: -165px;*/
+    margin-top: thumbLabelTop;
+    position: relative;
+    border-radius: 50%;
+ }
+ .thumbName {
+    margin-top: invThumbnailHeight;
+    text-align: bottom;
+    position: absolute;
+    bottom: calc(thumbnailHeight/2);
+    width: 100%;
+}
+.thumbTitle {
+    height: 40%;
+    width: 100%;
+    position: absolute;
+    top: halfTNHeight;
+    /*background-color: red;*/
+}
+
 .label {
     color: black;
 }
@@ -104,6 +130,10 @@
 }
 
 @media bp-iphone5 {
+    .teamDetailText {
+        width: 100%;
+        margin: 0 auto;
+    }
     .thumbnailBlock {
         margin: 0px 35px 35px 0px;
         width: 100%;
@@ -113,8 +143,8 @@
         float: left;
     }
     .thumbnailBlock .labelblock {
-        width: 75%;
-        margin-top: -290px;
+        width: 100%;
+        margin-top: -400px;
         font-size: 4em;
     }
     .thumbnailBlock img {
@@ -133,6 +163,10 @@
 
 }
 @media bp-iphone6{
+    .teamDetailText {
+        width: 100%;
+        margin: 0 auto;
+    }
     p, h3{
       font-size: 4vmin;
     }

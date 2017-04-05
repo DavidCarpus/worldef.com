@@ -18,7 +18,6 @@ export default class ProjectSlideshow extends React.Component {
         if(currentProject == slideshowName && this.state.data != null) {
             return this.state.data;
         }
-        // console.log('Loading urls for project ' + slideshowName);
         var images = slideshow.filter( (image)=> {return image.name ==slideshowName} )
         if (images.length ) { images = images[0].images }
         var slideshowData =
@@ -45,16 +44,11 @@ export default class ProjectSlideshow extends React.Component {
                 currentProject:props.slideshowName,
                 displayID: 1
             };
-            // console.log(JSON.stringify(this.state));
     }
 
     componentDidMount() {
        var intervalId = setInterval(this.timer.bind(this), 5000);
-    //    var slideshowData = this.loadURLs(this.props.slideshowName)
        this.setState( {
-        //    currentProject:this.props.slideshowName,
-        //    data:slideshowData,
-        //    displayID: 0,
            // store intervalId in the state so it can be accessed later:
            intervalId: intervalId
        });
@@ -73,7 +67,6 @@ export default class ProjectSlideshow extends React.Component {
         }
         displayID += 1;
         var slideshowData = this.loadURLs(this.props.slideshowName)
-        //  this.setState({data:slideshowData, displayID:0, currentProject: slideshowName})
        this.setState({
            data:slideshowData,
             displayID: displayID,
@@ -131,8 +124,6 @@ export default class ProjectSlideshow extends React.Component {
     );
   }
 }
-
-
 //
 // var settings = {
 //   dots: true,

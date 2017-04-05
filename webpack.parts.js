@@ -155,6 +155,12 @@ exports.setupCSS = function(paths) {
   return {
     module: {
       loaders: [
+          { test: /\.png$/,
+              loader: "url-loader?mimetype=image/png"
+            //   query: {
+            //       mimetype:'image/png'
+            //   }
+          },
           {
               test: /\.css$/,
               loader: 'style-loader'
@@ -187,7 +193,7 @@ exports.setupCSS = function(paths) {
             {
               test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
               loader: "url-loader?limit=10000&mimetype=image/svg+xml"
-            }
+          }
       ]
     }
   };

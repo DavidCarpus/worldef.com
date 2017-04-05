@@ -1,0 +1,35 @@
+@value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5 as from "./breakpoints.css";
+
+.projectStatistic{
+    width: 190px;
+    margin-bottom: 20px;
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+    height: 80px;
+}
+.projectStatisticDesc{
+    font-weight: bold;
+    height: 60%;
+}
+.projectStatisticValue{
+    height: 20px;
+    left: 0px;
+    width: 100%;
+}
+.projectStatisticBlock{
+    width: 90%;
+    margin: auto;
+}
+
+@media bp-iphone5 {
+    .projectStatisticBlock {
+            width: 100%;
+          font-size: 4vmin;
+        }
+        .projectStatistic{
+            width: 50%;
+            height: 180px;
+        }
+}

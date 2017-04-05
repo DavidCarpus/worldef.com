@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './projects.css';
+// import styles from './projects.css';
+import styles from './ProjectThumbnail.css';
 import { Link } from 'react-router'
 
 export default class ProjectThumbnail extends React.Component {

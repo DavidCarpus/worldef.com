@@ -1,8 +1,11 @@
+@value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5 as from "./breakpoints.css";
+
 .menuHeader{
     position: fixed;
     width: 100%;
     opacity: 1.0;
-    height: 140px;
+    height: 100px;
+    /*height: 55%;*/
     z-index: 100;
     margin: auto;
     display: block;
@@ -44,7 +47,13 @@ img {
     /*vertical-align: middle;*/
 }
 
-@media only screen and (min-device-width: 1024px)
-.caption {
-￼    background-attachment: fixed;
+@media bp-iphone5 {
+    .menuHeader{
+        height: 150px;
+    }
+}
+@media only screen and (min-device-width: 1024px){
+    .caption {
+    ￼    background-attachment: fixed;
+    }
 }

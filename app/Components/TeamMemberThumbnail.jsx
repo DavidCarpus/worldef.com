@@ -42,13 +42,17 @@ export default class TeamMemberThumbnail extends React.Component {
         var labelStyle='';
         if (this.state.hovered) {
             labelStyle={
-                color:'white',
-                backgroundColor:'black',
-                opacity: 0.5
+                color:'black',
+                // color:'white',
+                // color:'red',
+                opacity: 0.85,
+                backgroundColor:'#CCC',
             };
         }else {
             labelStyle={
+                opacity: 0.65,
                 color:'black',
+                // backgroundColor:'black',
                 } ;
         }
         var detailLink=this.detailLink(teamMember);
@@ -68,12 +72,16 @@ export default class TeamMemberThumbnail extends React.Component {
                     className={styles.labelblock}
                     style={labelStyle}
                     >
-                    {teamMember.name}<hr/>
-                    {teamMember.title}
+                    <div className={styles.thumbName}>{teamMember.name}
+                        <hr/>
+                        </div>
+                    <div className={styles.thumbTitle}>{teamMember.title}</div>
                 </div>
             </Link>
             </div>
         )
     }
 }
-// <a href={this.detailLink(teamMember)} >
+/*
+
+*/

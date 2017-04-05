@@ -1,0 +1,81 @@
+@value small as bp-small, large as bp-large, medium as bp-medium, iphone5 as bp-iphone5 as from "./breakpoints.css";
+
+.projectThumbnail {
+    float: left;
+    width: 200px;
+    padding-right: 2%;
+    margin-left: 25px;
+    /*background-color: green;*/
+}
+.projectThumbnail img {
+    opacity:0.5;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* If you want dots under the hoverable text */
+   /*border-bottom: 1px dotted black; */
+}
+.tooltiptext {
+  visibility: visible;;
+  width: 250px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  top: 50%;
+  left: -15%;
+  opacity: 0;
+  transition: opacity 1s;
+  position: absolute;
+  z-index: 1;
+}
+.tooltip .tooltiptext::after {
+  content: "  ";
+  position: absolute;
+  bottom: 100%;
+  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -20px;
+  border-width: 20px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  pointer-events: none;
+  border-color: transparent;
+  border-bottom-color: #000000; }
+
+/* Show the tooltip text when you mouse over the tooltip container */
+/* line 44, components/sass/_projects.scss */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1; }
+
+
+  @media bp-iphone5 {
+      .projectThumbnail {
+          width: 47%;
+          /*width: 100%;*/
+          padding-right: 0px;
+          padding-bottom: 80px;
+          /*background-color: green;*/
+      }
+      .projectThumbnail img{
+          width: 75%;
+          max-height: 100%;
+          align-items: center;
+          /*background-color: blue;*/
+      }
+      .tooltiptext {
+          font-size: 4vmin;
+          width: 450px;
+          left: -10%;
+          /*left: 45%;*/
+      }
+      .tooltip {
+          /*left: 15%;*/
+          /*width: 250px;*/
+      }
+
+  }

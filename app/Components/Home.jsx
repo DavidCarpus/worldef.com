@@ -37,7 +37,7 @@ class ContactOptions extends React.Component {
                 </div>
                 <div className={styles.traditional}>
                         <p><i className={[fa['fa-envelope'],fa['fa']].join(' ')}></i> - post@worldef.Com</p>
-                        <p><i className={[fa['fa-phone'],fa['fa']].join(' ')}></i> -WE Foundation org. number 915 548 423</p>
+                        <p><i className={[fa['fa-phone'],fa['fa']].join(' ')}></i> -WE Foundation org. number 915-548-423</p>
                         <p>EIN number: 80-0332342</p>
                 </div>
             </div>
@@ -78,7 +78,7 @@ export default class Home extends React.Component {
                         position='0px 80px'
                         height='502px'
                         />
-                    
+
                     <WeProjects />
 
                     <BkgImg image="./images/MG_4151.jpg"
